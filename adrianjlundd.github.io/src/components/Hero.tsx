@@ -21,6 +21,7 @@ export default function Hero() {
           <a
             href="https://github.com/adrianjlundd"
             target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2 rounded border border-slate-700"
           >
             GitHub

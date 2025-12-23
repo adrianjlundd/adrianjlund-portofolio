@@ -9,7 +9,7 @@ export default function Hero() {
                     Computer Science student @ NTNU
                 </p>
                 <p className="text-slate-500">
-                    AI · Data Analycis 
+                    AI · Data Analysis 
                 </p>
                  <div className="pt-4 flex gap-4">
           <a

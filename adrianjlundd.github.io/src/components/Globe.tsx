@@ -16,7 +16,7 @@ export default function Globe({ className }: GlobeProps) {
     if (!canvas) return;
 
     let width = 0;
-    let phi = -0.15; // Center view on Norway (around longitude 5-10°E)
+    let phi = -Math.PI / 6; // Center view on Norway (around longitude 5-10°E)
 
     const resize = () => {
       const parent = canvas.parentElement;
@@ -34,8 +34,8 @@ export default function Globe({ className }: GlobeProps) {
       devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
       width: canvas.width,
       height: canvas.height,
-      phi: -Math.PI / 6, // Initial view centered on Norway
-      theta: 0.25, // Slightly tilted for better view of Scandinavia
+      phi: -0.15, // Initial view centered on Norway
+      theta: 0.4, // Slightly tilted for better view of Scandinavia
       dark: 1,
       diffuse: 1.2,
       scale: 1.5,
@@ -45,12 +45,12 @@ export default function Globe({ className }: GlobeProps) {
       glowColor: [0.5, 0.6, 0.9],
       markerColor: [0.9, 0.95, 1],
       markers: [
-        { location: BERGEN, size: 0.07 },
-        { location: TRONDHEIM, size: 0.07 },
+        { location: BERGEN, size: 0.12 },
+        { location: TRONDHEIM, size: 0.12 },
       ],
       onRender: (state) => {
         state.phi = phi;
-        phi += 0.002;
+        phi += 0.0005;
         state.width = canvas.width;
         state.height = canvas.height;
       },

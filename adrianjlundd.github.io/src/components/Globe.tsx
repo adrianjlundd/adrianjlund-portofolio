@@ -16,7 +16,7 @@ export default function Globe({ className }: GlobeProps) {
     if (!canvas) return;
 
     let width = 0;
-    let phi = -Math.PI / 6; // Center view on Norway (around longitude 5-10°E)
+    let phi = -0.15; // Center view on Norway (around longitude 5-10°E)
 
     const resize = () => {
       const parent = canvas.parentElement;
@@ -38,7 +38,7 @@ export default function Globe({ className }: GlobeProps) {
       theta: 0.25, // Slightly tilted for better view of Scandinavia
       dark: 1,
       diffuse: 1.2,
-      scale: 1,
+      scale: 1.5,
       mapSamples: 16000,
       mapBrightness: 1.1,
       baseColor: [0.12, 0.16, 0.22],

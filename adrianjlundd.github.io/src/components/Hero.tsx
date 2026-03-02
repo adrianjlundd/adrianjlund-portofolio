@@ -1,4 +1,5 @@
 import React from "react"
+import Globe from "./Globe";
 
 type HeroProps = {
     name?: string;
@@ -89,9 +90,16 @@ const Hero: React.FC<HeroProps> = ({
             </div>
           </div>
 
-          
-            
-          
+          {/* Globe */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+              <div className="pointer-events-none absolute inset-0 rounded-full bg-white/5 blur-2xl" />
+              <Globe className="relative aspect-square w-full" />
+              <p className="mt-3 text-center text-xs text-white/50">
+                Bergen • Trondheim
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

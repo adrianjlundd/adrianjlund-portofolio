@@ -16,7 +16,7 @@ export default function Globe({ className }: GlobeProps) {
     if (!canvas) return;
 
     let width = 0;
-    let phi = 0;
+    let phi = -Math.PI / 6; // Center view on Norway (around longitude 5-10°E)
 
     const resize = () => {
       const parent = canvas.parentElement;
@@ -34,8 +34,8 @@ export default function Globe({ className }: GlobeProps) {
       devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
       width: canvas.width,
       height: canvas.height,
-      phi: 0,
-      theta: 0.3,
+      phi: -Math.PI / 6, // Initial view centered on Norway
+      theta: 0.25, // Slightly tilted for better view of Scandinavia
       dark: 1,
       diffuse: 1.2,
       scale: 1,

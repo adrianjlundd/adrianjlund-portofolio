@@ -31,24 +31,21 @@ const Hero: React.FC<HeroProps> = ({
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
-        <div className="grid items-center gap-10 lg:grid-cols-12 lg:justify-center">
+        <div className="flex flex-col items-center">
           {/* Text */}
-          <div className="lg:col-span-7 lg:mx-auto">
-            
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl whitespace-nowrap">
+          <div className="w-full max-w-3xl text-center">
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
               {name}
             </h1>
 
-            <p className="mt-3 text-lg text-white/70 sm:text-xl">
-              {role}
-            </p>
+            <p className="mt-3 text-lg text-white/70 sm:text-xl">{role}</p>
 
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
+            <p className="mt-5 mx-auto max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
               {tagline}
             </p>
 
             {/* CTAs */}
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
               <a
                 href="#projects"
                 className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/30"
@@ -63,8 +60,7 @@ const Hero: React.FC<HeroProps> = ({
                 Contact
               </a>
 
-              {/* Socials */}
-              <div className="flex items-center gap-3 sm:ml-2">
+              <div className="flex items-center gap-3 sm:ml-2 sm:justify-center">
                 <a
                   href={githubUrl}
                   target="_blank"
@@ -90,16 +86,19 @@ const Hero: React.FC<HeroProps> = ({
             </div>
           </div>
 
-          {/* Globe */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+          {/* Globe under text */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end lg:pt-10">
+            {/* optional glow, but NOT clipping */}
+             <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
               <div className="pointer-events-none absolute inset-0 rounded-full bg-white/5 blur-2xl" />
-              <Globe className="relative aspect-square w-full" />
-              <p className="mt-3 text-center text-xs text-white/50">
-                Bergen • Trondheim
-              </p>
-            </div>
+            {/* viktig: gi den HØYDE i stedet for aspect-square */}
+             <Globe className="relative w-full h-[320px] sm:h-[380px] lg:h-[420px]" />
+
+            <p className="mt-3 text-center text-xs text-white/50">
+              Bergen • Trondheim
+            </p>
           </div>
+        </div>
         </div>
       </div>
     </section>

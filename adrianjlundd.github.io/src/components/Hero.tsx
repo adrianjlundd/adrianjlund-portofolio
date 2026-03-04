@@ -19,15 +19,15 @@ const Hero: React.FC<HeroProps> = ({
   const [rotate, setRotate] = useState(true);
 
   return (
-    <section id="top" className="relative overflow-hidden" aria-label="Hero">
+    <section id="top" className="relative" aria-label="Hero">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-300/10 blur-3xl" />
-        <div className="absolute -bottom-24 right-12 h-72 w-72 rounded-full bg-rose-500/10 blur-3xl" />
+        <div className="absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-rose-500/10 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="grid items-center gap-10 lg:grid-cols-12">
-          <div className="relative z-20 lg:col-span-7">
+      <div className="relative mx-auto min-h-[82vh] max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+        <div className="relative flex min-h-[70vh] items-center">
+          <div className="relative z-20 w-full max-w-3xl">
             <p className="text-sm font-medium uppercase tracking-[0.18em] text-white/60">Portfolio</p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
               {name}
@@ -81,17 +81,17 @@ const Hero: React.FC<HeroProps> = ({
               </a>
             </div>
           </div>
+        </div>
 
-          <div className="relative z-10 lg:col-span-8 lg:col-start-6 lg:-ml-16 lg:mt-10">
-            <div className="pointer-events-none absolute -inset-10 rounded-full bg-white/10 blur-3xl" />
-            <Globe className="relative mx-auto w-full max-w-[32rem] h-[22rem] sm:h-[28rem] lg:h-[34rem]" rotate={rotate} />
+        <div className="pointer-events-none absolute right-[-4rem] top-1/2 z-10 h-[24rem] w-[24rem] -translate-y-1/2 sm:h-[30rem] sm:w-[30rem] lg:right-[-6rem] lg:h-[42rem] lg:w-[42rem]">
+          <div className="absolute -inset-10 rounded-full bg-white/10 blur-3xl" />
+          <Globe className="relative h-full w-full" rotate={rotate} />
 
-            <div className="pointer-events-none absolute left-[24%] top-[56%] rounded-full bg-red-500 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white shadow-lg">
-              Bergen
-            </div>
-            <div className="pointer-events-none absolute left-[35%] top-[44%] rounded-full bg-red-500 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white shadow-lg">
-              Trondheim
-            </div>
+          <div className="absolute left-[30%] top-[58%] rounded-full bg-red-500 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white shadow-lg">
+            Bergen
+          </div>
+          <div className="absolute left-[40%] top-[44%] rounded-full bg-red-500 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white shadow-lg">
+            Trondheim
           </div>
         </div>
       </div>

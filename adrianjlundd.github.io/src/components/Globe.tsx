@@ -46,39 +46,42 @@ export default function Globe({ className, rotate = true }: GlobeProps) {
     resize();
     window.addEventListener("resize", resize);
 
-    const globe = createGlobe(canvas, {
-      devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
-      width: canvas.width,
-      height: canvas.height,
-      phi: 0,
-      theta: THETA,
-      mapSamples: 67000,
-      mapBrightness: 5.2,
-      mapBaseBrightness: 0,
-      diffuse: 0.55,
-      dark: 0,
-      baseColor: hexToRgb01("#3c3c3c"),
-      markerColor: hexToRgb01("#ffffff"),
-      glowColor: hexToRgb01("#ffffff"),
-      scale: 1.04,
-      offset: [0.04, 0.04],
-      opacity: 0.45,
-      backgroundColor: hexToRgb01("#ffffff"),
-      markers: [
-        { location: BERGEN, size: 0.06 },
-        { location: TRONDHEIM, size: 0.06 },
-      ],
-      onRender: (state) => {
-        state.phi = phi;
-        state.theta = THETA;
-        state.width = canvas.width;
-        state.height = canvas.height;
+    const globe = createGlobe(
+      canvas,
+      {
+        devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+        width: canvas.width,
+        height: canvas.height,
+        phi: 0,
+        theta: THETA,
+        mapSamples: 67000,
+        mapBrightness: 5.2,
+        mapBaseBrightness: 0,
+        diffuse: 0.55,
+        dark: 0,
+        baseColor: hexToRgb01("#3c3c3c"),
+        markerColor: hexToRgb01("#ffffff"),
+        glowColor: hexToRgb01("#ffffff"),
+        scale: 1.04,
+        offset: [0.04, 0.04],
+        opacity: 0.45,
+        backgroundColor: hexToRgb01("#ffffff"),
+        markers: [
+          { location: BERGEN, size: 0.06 },
+          { location: TRONDHEIM, size: 0.06 },
+        ],
+        onRender: (state: any) => {
+          state.phi = phi;
+          state.theta = THETA;
+          state.width = canvas.width;
+          state.height = canvas.height;
 
-        if (rotateRef.current) {
-          phi += ROTATION_SPEED;
-        }
-      },
-    });
+          if (rotateRef.current) {
+            phi += ROTATION_SPEED;
+          }
+        },
+      } as any,
+    );
 
     return () => {
       window.removeEventListener("resize", resize);
@@ -92,3 +95,4 @@ export default function Globe({ className, rotate = true }: GlobeProps) {
     </div>
   );
 }
+

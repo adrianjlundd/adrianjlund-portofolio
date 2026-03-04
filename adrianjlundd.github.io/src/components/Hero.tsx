@@ -83,16 +83,11 @@ const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
 
-        <div className="pointer-events-none absolute right-[-4rem] top-1/2 z-10 h-[40rem] w-[40rem] -translate-y-1/2 sm:h-[40rem] sm:w-[40rem] lg:right-[-6rem] lg:h-[48em] lg:w-[48rem]">
+        <div className="pointer-events-none absolute right-[-4rem] top-1/2 z-10 h-[40rem] w-[40rem] -translate-y-1/2 sm:h-[40rem] sm:w-[40rem] lg:right-[-6rem] lg:h-[48rem] lg:w-[48rem]">
           <div className="absolute -inset-10 rounded-full bg-white/10 blur-3xl" />
           <Globe className="relative h-full w-full" rotate={rotate} />
 
-          <div className="absolute left-[30%] top-[58%] rounded-full bg-red-500 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white shadow-lg">
-            Bergen
-          </div>
-          <div className="absolute left-[40%] top-[44%] rounded-full bg-red-500 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white shadow-lg">
-            Trondheim
-          </div>
+          
         </div>
       </div>
     </section>

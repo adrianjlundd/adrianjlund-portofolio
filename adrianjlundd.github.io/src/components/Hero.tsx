@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
         <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/0 via-white/0 to-white/0" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/0 via-white/0 to-white/0" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
@@ -92,7 +92,7 @@ const Hero: React.FC<HeroProps> = ({
              <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
               <div className="pointer-events-none absolute inset-0 rounded-full bg-white/5 blur-2xl" />
             {/* viktig: gi den HØYDE i stedet for aspect-square */}
-             <Globe className="relative w-full h-[320px] sm:h-[380px] lg:h-[420px]" />
+             <Globe className="relative w-full h-80 sm:h-95 lg:h-105" />
 
             <p className="mt-3 text-center text-xs text-white/50">
               Bergen • Trondheim

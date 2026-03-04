@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+  background: #020617; /* slate-950 */
+}
+
+body {
+  overscroll-behavior-y: none;
+}

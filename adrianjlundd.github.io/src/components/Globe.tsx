@@ -61,11 +61,11 @@ export default function Globe({ className, rotate = true }: GlobeProps) {
         dark: 0.25,
         baseColor: hexToRgb01("#3c3c3c"),
         markerColor: hexToRgb01("#ff0000"),
-        glowColor: hexToRgb01("#bbbbbb"),
+        glowColor: hexToRgb01("#999999"),
         scale: 0.9,
         offset: [0.04, 0.04],
         opacity: 0.15,
-        backgroundColor: hexToRgb01("#ffffff"),
+        //backgroundColor: hexToRgb01("#ffffff"),
         markers: [
           { location: BERGEN, size: 0.02, color: hexToRgb01("#ff0000") },
           { location: TRONDHEIM, size: 0.02, color: hexToRgb01("#ff0000") },

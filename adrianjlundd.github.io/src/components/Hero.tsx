@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Globe from "./Globe";
 
 type HeroProps = {
@@ -16,8 +16,6 @@ const Hero: React.FC<HeroProps> = ({
   githubUrl = "https://github.com/USERNAME",
   linkedinUrl = "https://www.linkedin.com/in/USERNAME/",
 }) => {
-  const [rotate, setRotate] = useState(true);
-
   return (
     <section id="top" className="relative" aria-label="Hero">
       <div className="pointer-events-none absolute inset-0">
@@ -35,34 +33,27 @@ const Hero: React.FC<HeroProps> = ({
             <p className="mt-4 text-lg text-white/80 sm:text-xl">{role}</p>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">{tagline}</p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            {/* Alle 4 knapper på én rad */}
+            <div className="mt-8 flex flex-nowrap items-center gap-3 overflow-x-auto pb-1">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-medium text-black transition hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/30"
+                className="shrink-0 inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/30"
               >
                 View Projects
               </a>
+
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/30"
+                className="shrink-0 inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-white/30"
               >
                 Contact
               </a>
-              <button
-                type="button"
-                onClick={() => setRotate((value) => !value)}
-                className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
-              >
-                Toggle Rotation
-              </button>
-            </div>
 
-            <div className="mt-4 flex flex-wrap items-center gap-3">
               <a
                 href={githubUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white/90 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
+                className="shrink-0 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white/90 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
                 aria-label="Open GitHub profile"
               >
                 <GitHubIcon className="h-5 w-5" />
@@ -73,7 +64,7 @@ const Hero: React.FC<HeroProps> = ({
                 href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white/90 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
+                className="shrink-0 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-medium text-white/90 transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
                 aria-label="Open LinkedIn profile"
               >
                 <LinkedInIcon className="h-5 w-5" />
@@ -85,9 +76,7 @@ const Hero: React.FC<HeroProps> = ({
 
         <div className="pointer-events-none absolute right-[-4rem] top-1/2 z-10 h-[40rem] w-[40rem] -translate-y-1/2 sm:h-[40rem] sm:w-[40rem] lg:right-[-6rem] lg:h-[48rem] lg:w-[48rem]">
           <div className="absolute -inset-10 rounded-full bg-white/10 blur-3xl" />
-          <Globe className="relative h-full w-full" rotate={rotate} />
-
-          
+          <Globe className="relative h-full w-full" rotate={true} />
         </div>
       </div>
     </section>

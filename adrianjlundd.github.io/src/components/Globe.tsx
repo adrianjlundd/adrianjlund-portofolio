@@ -8,8 +8,8 @@ type GlobeProps = {
 
 const BERGEN = [60.39299, 5.32415] as [number, number];
 const TRONDHEIM = [63.4305, 10.3951] as [number, number];
-const THETA = 0.57;
-const ROTATION_SPEED = 0.003;
+const THETA = 0.78;
+const ROTATION_SPEED = 0.001;
 
 function hexToRgb01(hex: string): [number, number, number] {
   const value = hex.replace("#", "");
@@ -32,7 +32,7 @@ export default function Globe({ className, rotate = true }: GlobeProps) {
     if (!canvas) return;
 
     let width = 0;
-    let phi = 0;
+    let phi = 4.25;
 
     const resize = () => {
       const parent = canvas.parentElement;
@@ -62,7 +62,7 @@ export default function Globe({ className, rotate = true }: GlobeProps) {
         baseColor: hexToRgb01("#3c3c3c"),
         markerColor: hexToRgb01("#ffffff"),
         glowColor: hexToRgb01("#ffffff"),
-        scale: 1.04,
+        scale: 1.1,
         offset: [0.04, 0.04],
         opacity: 0.45,
         backgroundColor: hexToRgb01("#ffffff"),

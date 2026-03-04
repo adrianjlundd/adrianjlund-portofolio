@@ -83,7 +83,7 @@ const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
 
-        <div className="pointer-events-none absolute right-[-4rem] top-1/2 z-10 h-[24rem] w-[24rem] -translate-y-1/2 sm:h-[30rem] sm:w-[30rem] lg:right-[-6rem] lg:h-[42rem] lg:w-[42rem]">
+        <div className="pointer-events-none absolute right-[-4rem] top-1/2 z-10 h-[40rem] w-[40rem] -translate-y-1/2 sm:h-[40rem] sm:w-[40rem] lg:right-[-6rem] lg:h-[48em] lg:w-[48rem]">
           <div className="absolute -inset-10 rounded-full bg-white/10 blur-3xl" />
           <Globe className="relative h-full w-full" rotate={rotate} />
 

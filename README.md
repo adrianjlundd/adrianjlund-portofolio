@@ -1,7 +1,2 @@
-# adrianjlundd.github.io
-Personal portofolio website
-
-
-test
-
-test
+# adrianjlund.no
+Personal portfolio website

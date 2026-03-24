@@ -1,5 +1,5 @@
 {
-  "name": "adrianjlundd.github.io",
+  "name": "adrianjlund-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "cobe": "^0.6.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

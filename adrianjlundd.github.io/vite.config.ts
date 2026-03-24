@@ -4,5 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/', // riktig for username.github.io
+  base: '/', // riktig for root deployment (Vercel)
 })

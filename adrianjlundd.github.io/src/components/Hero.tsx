@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className="relative mx-auto min-h-[82vh] max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <div className="relative flex min-h-[70vh] items-center">
           <div className="relative z-20 w-full max-w-3xl">
-            <p className="text-sm font-medium uppercase tracking-[0.18em] text-white/60">Portfolio</p>
+            <p className="text-sm font-medium uppercase tracking-[0.18em] text-white/60"></p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
               {name}
             </h1>
